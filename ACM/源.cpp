@@ -3,12 +3,11 @@ using namespace std;
 
 typedef struct BiTNode
 {
-	BiTNode() { lchild = rchild = nullptr; data = '#'; }
 	struct BiTNode* lchild;
 	struct BiTNode* rchild;
 	char data;
 }BiTNode;
-
+      
 BiTNode* BuildTree( char* exp, int s, int e )
 {
 	if ( e - s == 1 )
@@ -79,8 +78,9 @@ void LevelOrder( BiTNode *T )
 
 int main()
 {
-	char exp[] = "a+b*(c-d)-e/f";
+	char exp[] = "2+3*(4-1)-5/1"/*"a+b*(c-d)-e/f"*/;
 	BiTNode *p = BuildTree( exp, 0, strlen( exp ) );
 	LevelOrder( p );
+	cout << endl;
 	return 0;
 }
