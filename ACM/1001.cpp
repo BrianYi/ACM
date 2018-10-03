@@ -1,4 +1,4 @@
-// Sum Problem
+﻿// Sum Problem
 // Problem Description
 // Hey, welcome to HDOJ(Hangzhou Dianzi University Online Judge).
 // In this problem, your task is to calculate SUM(n) = 1 + 2 + 3 + ... + n.
@@ -13,18 +13,18 @@
 // 1
 // 5050
 
-#include<stdio.h>
-int main()
-{
-    int i, n, sum;
-    while (scanf("%d", &n) != EOF)
-    {
-        sum = 0;
-        for (i = 1; i <= n; i++)
-        {
-            sum += i;
-        }
-        printf("%d\n\n", sum);
-    }
-    return 0;
-}
+// #include<stdio.h>
+// int main()
+// {
+//     int i, n, sum;
+//     while (scanf("%d", &n) != EOF)
+//     {
+//         sum = 0;
+//         for (i = 1; i <= n; i++)
+//         {
+//             sum += i;
+//         }
+//         printf("%d\n\n", sum);
+//     }
+//     return 0;
+// }

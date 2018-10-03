@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="1000.cpp" />
     <ClCompile Include="1001.cpp" />
+    <ClCompile Include="源.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E88EE4F0-27A3-40C4-805C-36E41FDABE28}</ProjectGuid>
