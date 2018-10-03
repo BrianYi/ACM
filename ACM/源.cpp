@@ -54,9 +54,33 @@ BiTNode* BuildTree( char* exp, int s, int e )
 	return p;
 }
 
+void visit(BiTNode *T)
+{
+	cout << T->data << " ";
+}
+
+
+#define MAXSIZE 100
+void LevelOrder( BiTNode *T )
+{
+	BiTNode *Q[MAXSIZE]; int front = -1, rear = -1;
+	if ( !T ) return;
+	Q[++rear] = T;
+	while ( front != rear )
+	{
+		BiTNode *p = Q[++front];
+		visit( p );
+		if ( p->lchild )
+			Q[++rear] = p->lchild;
+		if ( p->rchild )
+			Q[++rear] = p->rchild;
+	}
+}
+
 int main()
 {
 	char exp[] = "a+b*(c-d)-e/f";
-	BuildTree( exp, 0, strlen( exp ) );
+	BiTNode *p = BuildTree( exp, 0, strlen( exp ) );
+	LevelOrder( p );
 	return 0;
 }
